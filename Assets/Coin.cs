@@ -29,9 +29,9 @@ public class Coin : Entity
         }
     }
 
-    public override void Die()
+    public override void Die() // we polymophed die by changing :D 
     {
-        base.Die();
+        base.Die(); // we inherited die :D 
         GameObject.Destroy(gameObject);
     }
 

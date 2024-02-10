@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Entity
+public class Enemy : Entity // INHERITANCE
 {
     //public float m_movespeed =2f;
       
@@ -13,7 +13,7 @@ public class Enemy : Entity
 
     public bool GetGoingLeft() { return IsGoingLeft; }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision) // ABSTRACTION
     {
         // CHECK IF WE COLLIDED WITH PLAYER
         if (collision.gameObject.tag == "Player")
@@ -33,7 +33,7 @@ public class Enemy : Entity
         }
     }
 
-    public virtual void MovementLogic() 
+    public virtual void MovementLogic() // ABSTRACTION
     {
         if (IsGoingLeft) 
         {
@@ -45,7 +45,7 @@ public class Enemy : Entity
         }
     }
 
-    public override void Die()
+    public override void Die() // POLYMORPHISM
     {
         base.Die();
         GameObject.Destroy(gameObject);

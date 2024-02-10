@@ -8,12 +8,12 @@ public class Entity : MonoBehaviour
 
     private float moveSpeed = 2;
 
-    protected float GetMoveSpeed()
+    protected float GetMoveSpeed()// ENCAPSULATION
     {
         return moveSpeed;
     }
 
-    protected void SetMoveSpeed(float value)
+    protected void SetMoveSpeed(float value)// ENCAPSULATION
     {
         moveSpeed = value;
     }

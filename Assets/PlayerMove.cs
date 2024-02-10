@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : Entity
 {
@@ -34,6 +35,12 @@ public class PlayerMove : Entity
             rb.AddForce(0, 250, 0);
         }
         
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        SceneManager.LoadScene("SampleScene");
     }
 
 
